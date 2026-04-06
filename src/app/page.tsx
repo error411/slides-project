@@ -90,22 +90,12 @@ export default function QuickSlideScanPOCPage() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-4 sm:p-5 shadow-xl">
-            <div className="rounded-[1.5rem] border border-slate-200 bg-white p-4 sm:p-5 shadow-sm">
-              <div className="mb-4 flex items-center justify-between gap-3">
-                <span className="text-sm font-semibold text-slate-700">Hero Visual</span>
-                <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">
-                  Rig concept render
-                </span>
-              </div>
-              <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-50">
-                <img
-                  src="/images/quickslidescan-rig-hero.png"
-                  alt="QuickSlideScan rig concept showing iPhone mounted above a light pad and slide holder"
-                  className="block h-auto w-full"
-                />
-              </div>
-            </div>
+          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 shadow-xl">
+            <img
+              src="/images/quickslidescan-rig-hero.png"
+              alt="QuickSlideScan rig concept showing iPhone mounted above a light pad and slide holder"
+              className="block h-auto w-full"
+            />
           </div>
         </div>
       </section>
@@ -203,11 +193,11 @@ export default function QuickSlideScanPOCPage() {
                 </div>
               </div>
 
-              <div className="rounded-[2rem] border border-amber-200 bg-amber-50 px-6 py-5 text-amber-900 shadow-sm">
+              {/* <div className="rounded-[2rem] border border-amber-200 bg-amber-50 px-6 py-5 text-amber-900 shadow-sm">
                 <div className="text-sm leading-7">
                   <span className="font-semibold">POC assumptions:</span> low-cost parts, simple DIY holder, iPhone capture, batch-first workflow.
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,143 +1,131 @@
-import Link from 'next/link'
+export default function SlideSnapLandingPage() {
+  const parts = [
+    {
+      title: 'Overhead phone mount',
+      desc: 'Stable top-down mount for the iPhone. This is the key piece.',
+      price: '$47.99',
+      url: 'https://www.bestbuy.com/product/neewer-entry-level-overhead-phone-stand-with-led-light-foldable-remote-v10/CZLV9FXSRW',
+      cta: 'View mount',
+    },
+    {
+      title: 'A4 LED light pad',
+      desc: 'Use this as the backlight under the slide holder.',
+      price: '$13.99',
+      url: 'https://www.walmart.com/ip/A4-LED-tracing-light-box-USB-powered-suitable-artistic-endeavours-including-tattoo-transfer-painting-live-streaming-sketching-animation-template-crea/19240104653',
+      cta: 'View light pad',
+    },
+    {
+      title: 'Bluetooth shutter remote',
+      desc: 'Optional, but it speeds up capture and reduces shake.',
+      price: '$11.99+',
+      url: 'https://www.ebay.com/itm/146848451445',
+      cta: 'View remote',
+    },
+    {
+      title: 'Diffusion sheet',
+      desc: 'Use parchment paper or thin white plastic you already have at home.',
+      price: '$0–$5',
+      url: 'https://www.target.com/s/parchment+paper',
+      cta: 'View parchment paper',
+    },
+  ];
 
-const steps = [
-  {
-    title: 'Capture your slides',
-    description:
-      'Use a simple DIY setup with your phone, tripod, and backlight to photograph slides quickly.',
-  },
-  {
-    title: 'Upload in bulk',
-    description:
-      'Drag in a full batch of images at once instead of scanning one-by-one in a clunky mobile app.',
-  },
-  {
-    title: 'Get cleaned digital images',
-    description:
-      'We process, enhance, and prepare your slide images so they are easier to review, save, and share.',
-  },
-]
+  const steps = [
+    {
+      label: 'Step 1',
+      title: 'Get the parts',
+      body: 'Overhead phone mount, light pad, diffusion sheet, and a simple slide holder.',
+    },
+    {
+      label: 'Step 2',
+      title: 'Set it up once',
+      body: 'Light pad flat on the table, holder taped in place, phone centered above it.',
+    },
+    {
+      label: 'Step 3',
+      title: 'Lock it and repeat',
+      body: 'Adjust height until the slide fills most of the frame, then do not move anything.',
+    },
+  ];
 
-const benefits = [
-  'Built for bulk workflows, not one-at-a-time scanning',
-  'Simple upload and processing experience',
-  'Designed for DIY slide digitizing setups',
-  'Fast path from capture to usable digital images',
-]
+  const buildSteps = [
+    'Place the light pad flat on a table.',
+    'Add one diffusion layer on top to soften hotspots.',
+    'Tape the slide holder in the center of the light pad.',
+    'Mount the iPhone directly above the holder.',
+    'Raise or lower the phone until the slide fills most of the frame with no digital zoom.',
+    'Lock the tripod and holder position before starting the batch.',
+  ];
 
-export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.12),transparent_30%)]" />
-        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-          <div className="grid items-center gap-14 lg:grid-cols-2">
-            <div>
-              <div className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-600 shadow-sm">
-                Batch-first slide digitizing
-              </div>
-
-              <h1 className="mt-6 max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl">
-                Turn old slides into digital photos — fast.
-              </h1>
-
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Built for simple DIY setups. Capture your slides quickly, upload
-                them in bulk, and get cleaned digital images without a slow,
-                one-by-one workflow.
-              </p>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/upload"
-                  className="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-slate-950/15 transition hover:-translate-y-0.5 hover:bg-slate-800"
-                >
-                  Start Uploading
-                </Link>
-
-                <a
-                  href="#how-it-works"
-                  className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50"
-                >
-                  See how it works
-                </a>
-              </div>
-
-              <div className="mt-10 grid gap-3 sm:grid-cols-2">
-                {benefits.map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-700 shadow-sm backdrop-blur"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
+      <section className="border-b border-slate-200">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-10 lg:grid-cols-2 lg:items-center lg:py-24">
+          <div>
+            <div className="mb-4 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600">
+              No scanner required • Low-cost setup • Fast batch capture
             </div>
+            <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+              Digitize 100 Slides in 10 Minutes
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+              Build a simple slide capture rig, use your iPhone, and move through big boxes of old slides fast.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#rig"
+                className="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5"
+              >
+                Build Your Rig
+              </a>
+              <a
+                href="#parts"
+                className="inline-flex items-center justify-center rounded-2xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+              >
+                Buy the Parts
+              </a>
+            </div>
+            <p className="mt-4 text-sm text-slate-500">
+              If you can set up a tripod, you can build this.
+            </p>
+          </div>
 
-            <div className="lg:pl-8">
-              <div className="rounded-[28px] border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/60">
-                <div className="rounded-[24px] bg-slate-950 p-6 text-white">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm text-slate-300">Processing preview</p>
-                      <h2 className="mt-1 text-2xl font-semibold">
-                        Batch upload workflow
-                      </h2>
-                    </div>
-                    <div className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-slate-200">
-                      MVP
-                    </div>
+          <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-5 shadow-xl">
+            <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+              <div className="mb-4 flex items-center justify-between">
+                <span className="text-sm font-semibold text-slate-700">Simple Capture Rig</span>
+                <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700">
+                  5-minute setup
+                </span>
+              </div>
+              <div className="relative mx-auto flex aspect-[4/5] max-w-md items-center justify-center overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-50 shadow-inner">
+                <div className="absolute bottom-7 h-10 w-72 rounded-full bg-amber-100/80 blur-sm" />
+                <div className="absolute bottom-12 flex h-28 w-72 items-center justify-center rounded-[1.5rem] border border-amber-200 bg-amber-50 shadow-sm">
+                  <div className="absolute -top-3 rounded-full bg-slate-950 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
+                    Light pad
                   </div>
-
-                  <div className="mt-6 grid grid-cols-3 gap-3">
-                    {['Raw', 'Enhanced', 'Export'].map((label, index) => (
-                      <div
-                        key={label}
-                        className="rounded-2xl bg-white/5 p-3"
-                      >
-                        <div className="aspect-[4/5] rounded-xl bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800" />
-                        <div className="mt-3 flex items-center justify-between">
-                          <span className="text-sm text-slate-200">{label}</span>
-                          <span className="text-xs text-slate-400">
-                            {index === 0 ? '01' : index === 1 ? '02' : '03'}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
+                  <div className="flex h-16 w-20 items-center justify-center rounded-sm border-4 border-slate-700 bg-orange-100 shadow-sm">
+                    <div className="h-8 w-8 border border-slate-500 bg-white/70" />
                   </div>
-
-                  <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-slate-300">Batch status</span>
-                      <span className="font-medium text-white">42 images</span>
-                    </div>
-                    <div className="mt-3 h-2 rounded-full bg-white/10">
-                      <div className="h-2 w-2/3 rounded-full bg-white" />
-                    </div>
-                    <div className="mt-3 flex items-center justify-between text-xs text-slate-400">
-                      <span>Uploaded and processing</span>
-                      <span>67%</span>
-                    </div>
+                  <div className="absolute -top-10 left-1/2 h-8 w-px -translate-x-1/2 bg-slate-300" />
+                  <div className="absolute -top-14 left-1/2 -translate-x-1/2 rounded-full bg-white px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-600 shadow-sm ring-1 ring-slate-200">
+                    Slide holder
                   </div>
                 </div>
-
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-slate-200 p-4">
-                    <p className="text-sm font-medium text-slate-900">Why this exists</p>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Most tools are built for casual one-photo-at-a-time scanning.
-                      This is built for moving through a full box of slides faster.
-                    </p>
+                <div className="absolute top-16 flex flex-col items-center">
+                  <div className="rounded-[1.25rem] border-4 border-slate-900 bg-white p-2 shadow-lg">
+                    <div className="h-24 w-16 rounded-xl bg-slate-100" />
                   </div>
-
-                  <div className="rounded-2xl border border-slate-200 p-4">
-                    <p className="text-sm font-medium text-slate-900">Best for</p>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Families, hobbyists, archivists, and anyone with lots of slides
-                      who wants a simpler workflow from capture to digital output.
-                    </p>
+                  <div className="h-16 w-2 rounded-full bg-slate-400" />
+                  <div className="rounded-full bg-white px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-600 shadow-sm ring-1 ring-slate-200">
+                    iPhone centered above slide
                   </div>
+                </div>
+                <div className="absolute right-6 top-28 rounded-full bg-white px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-600 shadow-sm ring-1 ring-slate-200">
+                  Lens parallel to slide
+                </div>
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-600 shadow-sm ring-1 ring-slate-200">
+                  6–10 in above slide
                 </div>
               </div>
             </div>
@@ -145,97 +133,178 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="how-it-works" className="border-t border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
+      <section id="rig" className="border-b border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:py-20">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
-              How it works
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-              A faster path from physical slides to digital files
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Build the rig</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              Build the rig once. Capture hundreds of slides fast.
             </h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">
-              Keep the capture process simple. The product shines by making the
-              upload and processing workflow cleaner and faster.
+            <p className="mt-4 text-lg text-slate-600">
+              Keep the phone fixed, keep the slide in the same spot, and use even backlight.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {steps.map((step, index) => (
-              <div
-                key={step.title}
-                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
-              >
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-950 text-sm font-semibold text-white">
-                  {index + 1}
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {steps.map((item) => (
+              <div key={item.title} className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                  {item.label}
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-slate-950">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  {step.description}
-                </p>
+                <h3 className="mt-2 text-lg font-semibold text-slate-900">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{item.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">What to acquire</p>
+              <h3 className="mt-2 text-2xl font-bold text-slate-950">The exact pieces you need</h3>
+              <div className="mt-5 space-y-3">
+                {[
+                  'Tripod or overhead mount that positions the phone directly above the slide',
+                  'Phone mount that holds the iPhone flat and stable',
+                  'LED light pad or tracing pad with adjustable brightness',
+                  'Diffusion layer like parchment paper or thin white plastic',
+                  'Simple slide holder made from foam board or cardboard',
+                  'Optional Bluetooth shutter remote for faster capture',
+                ].map((item) => (
+                  <div key={item} className="flex gap-3 rounded-[1.25rem] bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700">
+                    <div className="mt-1 h-2.5 w-2.5 rounded-full bg-slate-900" />
+                    <p>{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">Build steps</p>
+              <h3 className="mt-2 text-2xl font-bold text-slate-950">Assemble it in order</h3>
+              <div className="mt-5 space-y-4">
+                {buildSteps.map((item, index) => (
+                  <div
+                    key={item}
+                    className="flex gap-4 rounded-[1.25rem] border border-slate-200 bg-slate-50 px-4 py-3 text-sm leading-6 text-slate-700"
+                  >
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-950 text-xs font-semibold text-white">
+                      {index + 1}
+                    </div>
+                    <p>{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-[2rem] border border-amber-200 bg-amber-50 px-6 py-5 text-amber-900 shadow-sm">
+            <div className="text-sm leading-7">
+              <span className="font-semibold">Typical setup cost:</span> about $60–$70 with the core purchased parts
+              <br />
+              <span className="font-semibold">Setup time:</span> about 5 minutes
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="parts" className="border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:py-20">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Buy the parts</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              Buy the core pieces and build today
+            </h2>
+            <p className="mt-4 text-lg text-slate-600">
+              Keep the shopping list short. Do not turn this into a gear hunt.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {parts.map((item) => (
+              <div key={item.title} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">{item.desc}</p>
+                  </div>
+                  <div className="rounded-full bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200">
+                    {item.price}
+                  </div>
+                </div>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center justify-center rounded-2xl bg-slate-950 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                >
+                  {item.cta}
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-          <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
-                Positioning
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-                Built for volume, not novelty
-              </h2>
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
-                The point is not to make scanning feel magical. The point is to make
-                digitizing a lot of slides feel manageable.
-              </p>
-            </div>
+      <section className="border-b border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:py-20">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Fast workflow</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              Capture 100+ slides without slowing down
+            </h2>
+          </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
-              <p className="text-sm font-medium text-slate-900">What users want</p>
-              <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600">
-                <li>Less friction</li>
-                <li>Bulk upload instead of repetitive tapping</li>
-                <li>Cleaner images with minimal effort</li>
-                <li>A simple export path when processing is done</li>
-              </ul>
-            </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: 'Stage the stack',
+                body: 'Keep unshot slides on one side and finished slides on the other.',
+              },
+              {
+                title: 'Swap and shoot',
+                body: 'Drop each slide into the holder and trigger with the remote or volume button.',
+              },
+              {
+                title: 'Do not review mid-batch',
+                body: 'Finish the whole stack first, then clean up and sort later.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{item.body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-slate-200 bg-slate-950 text-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-          <div className="rounded-[32px] border border-white/10 bg-white/5 p-8 sm:p-10">
-            <div className="max-w-3xl">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-400">
-                Get started
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Ready to process your first batch?
-              </h2>
-              <p className="mt-4 text-lg leading-8 text-slate-300">
-                Upload a set of slide images and start testing the workflow end to end.
-              </p>
-            </div>
-
-            <div className="mt-8">
-              <Link
-                href="/upload"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-medium text-slate-950 transition hover:-translate-y-0.5 hover:bg-slate-100"
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-6 py-16 text-center md:px-10 lg:py-24">
+          <div className="rounded-[2rem] border border-slate-200 bg-slate-950 px-8 py-12 text-white shadow-xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">Start now</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+              Build it once and start digitizing tonight
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-300">
+              Buy the core parts, set the rig once, and move through old slides fast without buying a dedicated scanner.
+            </p>
+            <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+              <a
+                href="#parts"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5"
               >
-                Go to Upload
-              </Link>
+                Buy the Parts
+              </a>
+              <a
+                href="#rig"
+                className="inline-flex items-center justify-center rounded-2xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Build Your Rig
+              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }

@@ -51,9 +51,6 @@ export default function QuickSlideScanPOCPage() {
       <section className="border-b border-slate-200">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-10 lg:grid-cols-2 lg:items-center lg:py-24">
           <div>
-            <div className="mb-4 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600">
-              Stakeholder proof of concept • DIY capture rig • Fast batch workflow
-            </div>
             <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
               Digitize old slides fast with a simple iPhone rig
             </h1>
